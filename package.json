@@ -1,0 +1,23 @@
+{
+  "name": "mental-health-platform",
+  "version": "1.0.0",
+  "description": "Full-stack mental health platform with AI integration and biometric authentication",
+  "scripts": {
+    "install:all": "npm install && cd client && npm install && cd ../server && npm install",
+    "clean:all": "rm -rf node_modules package-lock.json && cd client && rm -rf node_modules package-lock.json && cd ../server && rm -rf node_modules package-lock.json",
+    "dev:client": "cd client && npm start",
+    "dev:server": "cd server && npm run dev",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "build": "cd client && npm run build",
+    "test": "cd server && npm test"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": ["mental-health", "webauthn", "ai", "biometric", "healthcare"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
